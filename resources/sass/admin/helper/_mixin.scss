@@ -1,0 +1,29 @@
+@mixin animate($speed: 0.35) {
+    transition: all #{$speed}s ease-in-out;
+}
+
+@mixin shadow($height: 1) {
+	box-shadow:
+	0 #{$height}px #{$height*2}px rgba(black, 0.1+0.2/$height),
+	0 0 #{$height}px rgba(black, 0.1/$height);
+}
+
+@mixin flex-row($margin-xs: 30px, $margin-sm: 30px, $margin-md: 30px, $margin-lg: 30px) {
+	> .row {
+		display: flex;
+		flex-wrap: wrap;
+		> div {
+			margin-bottom: $margin-xs / 2; margin-top: $margin-xs / 2;
+			@include breakpoint-up(sm) {margin-bottom: $margin-sm / 2; margin-top: $margin-sm / 2};
+			@include breakpoint-up(md) {margin-bottom: $margin-md / 2; margin-top: $margin-md / 2};
+			@include breakpoint-up(lg) {margin-bottom: $margin-lg / 2; margin-top: $margin-lg / 2};
+		}
+	}
+}
+
+@mixin square-icon {
+	width: 1em;
+	height: 1em;
+	line-height: 1em;
+	text-align: center;
+}

@@ -1,0 +1,44 @@
+<?php namespace App;
+
+use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+##translatable_namespaces##
+
+class ##model## extends Model
+
+{
+    use HasFactory;
+    ##translatable_traits##
+
+    ##translatable_eager##
+
+    ##fillable_attributes##
+    protected $fieldspec = [];
+
+    /*
+    |--------------------------------------------------------------------------
+    |  Sluggable & Translatable
+    |--------------------------------------------------------------------------
+    */
+    ##translatable_attributes##
+    ##sluggable##
+
+    /*
+    |--------------------------------------------------------------------------
+    |  RELATION
+    |--------------------------------------------------------------------------
+    */
+    ##relations##
+
+    /*
+    |--------------------------------------------------------------------------
+    |  Fieldspec
+    |--------------------------------------------------------------------------
+    */
+    function getFieldSpec()
+    {
+        ##fieldspecs##
+
+        return $this->fieldspec;
+    }
+}

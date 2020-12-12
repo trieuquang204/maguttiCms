@@ -1,0 +1,30 @@
+$this->fieldspec['##field##'] = [
+            'type'          => 'relation',
+            'model'         => '##relation_model##',
+            //'relation_name' => '##relation_name##',
+            'foreign_key'   => 'id',
+            'label_key'     => 'title',
+            'order_field'   => 'sort',
+
+            // Uncomment for a Tree relation.
+            //'type'          => 'relation_tree',
+            //'tree_field'    => 'parent_id',
+
+            // Uncomment for a multiple checkboxes relation.
+            //'type'          => 'relation_checkboxes',
+            //'multiple'      => 1,
+
+            // Uncomment for an image relation.
+            //'type'            => 'relation_image',
+
+            //'relationSaveMethod' => 'save##relation_model##',
+            //'whereRaw'           => ($this->isSu()) ? '' : 'name != "su"',
+            //'validation' => 'required',
+            //'roles'      => ['su', 'admin'],
+
+            'required' => 0,
+            'hidden'   => 0,
+            'display'  => 1,
+            'label'    => trans('admin.label.##field##'),
+            'cssClass' => 'selectize',
+        ];

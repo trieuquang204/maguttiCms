@@ -1,0 +1,44 @@
+#simpleDocGallery,
+#simpleGallery {
+	overflow: hidden;
+	display: block;
+	margin: 0 -10px;
+	padding: 0;
+	display: flex;
+	list-style: none;
+	flex-wrap: wrap;
+
+	li {
+		padding: 10px;
+		text-align: center;
+		float: left;
+		margin: 10px;
+		border-radius: 0;
+		cursor: move;
+
+		img {
+			width: 100%;
+			margin: 0.5em 0;
+		}
+		transition: border-color 0.3s;
+
+		&:hover {
+			border-color: $color-2;
+		}
+	}
+
+	.actions {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	.caption {
+		font-weight: bold;
+		text-align: center;
+		width: 100px;
+		line-height: 1em;
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+	}
+}

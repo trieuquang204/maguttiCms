@@ -1,0 +1,1 @@
+'slug' => ['field' => '##sluggable_field_name##', 'updatable' => false, 'translatable' => 1]

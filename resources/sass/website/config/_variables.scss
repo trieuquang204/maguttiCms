@@ -1,0 +1,82 @@
+/*	colors	*/
+
+$color-background: white;
+
+$color-text: #000;
+$color-text-contrast: white; // used in contrast with primary and secondary color
+
+$color-primary: $color-text;
+$color-secondary: #337d64;
+$color-accent: #ec6a5a;
+$color-4: #BFB1AC;
+$color-5: #EBE6E5;
+$color-6: #5A524E;
+
+$color-price-discount: #08a643;
+
+/*	font families	*/
+
+$font-family-text: "Quicksand", sans-serif;
+$font-family-title: "Quicksand", sans-serif;
+$font-family-subtitle: 'Playfair Display', serif;
+$font-family-icons: 'Font Awesome 5 Free';
+
+/*	boders 	*/
+
+$border-width: 3px;
+$border-color: $color-4;
+
+$border-radius: 3px;
+
+/*	grid	*/
+
+$grid-space: 30px;
+
+/*	navbar 	*/
+$navbar-trigger: 'lg';
+$navbar-height-mobile: 60px;
+$navbar-height-content-mobile: 30px;
+$navbar-height-logo-mobile: 40px;
+$navbar-height: 110px;
+$navbar-height-content: 50px;
+$navbar-height-logo: 70px;
+
+$navbar-height-padding-mobile: ($navbar-height-mobile - $navbar-height-logo-mobile) / 2;
+@if ($navbar-height-content-mobile > $navbar-height-logo-mobile) {
+	$navbar-height-padding-mobile: ($navbar-height-mobile - $navbar-height-content-mobile) / 2;
+}
+$navbar-height-padding: ($navbar-height - $navbar-height-logo) / 2;
+@if ($navbar-height-content > $navbar-height-logo) {
+	$navbar-height-padding: ($navbar-height - $navbar-height-content) / 2;
+}
+$navbar-width-padding-mobile: $grid-space / 2;
+$navbar-width-padding: $grid-space / 2;
+
+$navbar-color: $color-text;
+$navbar-background: $color-background;
+
+/*	navbar items	*/
+
+$navbar-item-padding: 0px;
+$navbar-item-margin: 1.2rem;
+
+$navbar-item-color: $color-text;
+$navbar-item-background: transparent;
+$navbar-item-color-hover: $color-accent;
+$navbar-item-background-hover: transparent;
+$navbar-item-color-active: $color-accent;
+$navbar-item-background-active: transparent;;
+
+/*	forms	*/
+$form-control-background: $color-background;
+$form-control-border-color: $color-4;
+$form-control-border-color-focus: $color-primary;
+$form-control-placeholder-color: $color-4;
+
+/*	buttons	*/
+
+$button-hover-mix: 25%;
+$button-active-mix: 50%;
+
+/*	misc	*/
+$social-button-size: 35px;

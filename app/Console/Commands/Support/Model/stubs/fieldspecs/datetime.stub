@@ -1,0 +1,11 @@
+$this->fieldspec['##field##'] = [
+			'type'            => 'string',
+			'required'        => 1,
+			'hidden'          => 0,
+			'label'           => trans('admin.label.##field##'),
+			'display'         => 1,
+			'cssClass'        => 'datetimepicker',
+            //'cssClass'      => 'datepicker',
+			'cssClassElement' => 'col-sm-3',
+			'validation' => ['required','date_format:d-m-Y']
+        ];

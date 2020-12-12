@@ -1,0 +1,7 @@
+$this->fieldspec['##field##'] = [
+            'type'     => 'boolean',
+            'required' => 0,
+            'hidden'   => 0,
+            'label'    => trans('admin.label.##field##'),
+            'display'  => 1,
+        ];

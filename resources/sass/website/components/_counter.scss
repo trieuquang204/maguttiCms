@@ -1,0 +1,35 @@
+
+  .counter {
+    &-item{
+      color:$color-accent;
+      .h5{
+        margin-bottom: 0rem;
+      }
+      @include media-breakpoint-down(md) {
+        flex-basis: 50%;
+      }
+
+    }
+    &-number{
+      color:$color-primary;
+      font-size:4rem;
+      font-weight: bolder;
+      text-align: center;
+      min-width: 120px;
+      @include animate(2);
+      &.running{
+        color:#fff;
+      }
+    }
+    &-title{
+      border-top:2px solid $color-accent;
+      color:$color-accent;
+      font-weight:200;
+      padding-top: 0.3rem ;
+      display: inline-flex;
+      font-size:1.2rem;
+    }
+
+  }
+
+

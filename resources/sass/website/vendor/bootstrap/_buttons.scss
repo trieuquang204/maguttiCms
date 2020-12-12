@@ -1,0 +1,93 @@
+// stylelint-disable selector-no-qualifying-type
+//
+// Base styles
+//
+
+.btn {
+	@include animate();
+	@include button-variant($color-text, $color-text, $color-text-contrast);
+	border-radius:$btn-border-radius;
+	border: 3px solid transparent;
+	padding:0.5rem 2rem;
+	font-weight:bold ;
+	text-transform: uppercase;
+
+}
+
+.btn-outline {
+	@include button-outline-variant($body-color, $color-text-contrast);
+}
+
+.btn-primary {
+	@include button-variant($color-primary, $color-primary, $color-text-contrast);
+}
+
+.btn-secondary {
+	@include button-variant($color-secondary, $color-secondary, $color-text-contrast);
+}
+
+.btn-accent {
+	@include button-variant($color-accent, $color-accent, $color-text-contrast);
+}
+
+.btn-color-4 {
+	@include button-variant($color-4, $color-4, $color-text);
+}
+
+.btn-color-5 {
+	 @include button-variant($color-5, $color-5, $color-text);
+ }
+
+.btn-color-6 {
+	@include button-variant($color-5, $color-5, $color-text);
+}
+
+
+
+
+@each $color in ('info', 'success', 'warning', 'danger') {
+	.btn-#{$color} {
+		@include button-variant(map_get($theme-colors, $color), map_get($theme-colors, $color), $color-text-contrast);
+	}
+}
+
+.btn-outline-primary {
+	@include button-outline-variant($color-primary, $color-text-contrast);
+}
+
+.btn-outline-secondary {
+	@include button-outline-variant($color-secondary, $color-text-contrast);
+}
+
+.btn-outline-accent {
+	@include button-outline-variant($color-accent, $color-text-contrast);
+}
+
+.btn-outline-color-4 {
+	@include button-outline-variant($color-4, $color-text-contrast,$color-4);
+}
+
+.btn-outline-color-5 {
+	@include button-outline-variant($color-5, $color-text);
+}
+
+.btn-outline-color-5 {
+	@include button-outline-variant($color-5, $color-text);
+}
+
+.btn-outline-color-6 {
+	@include button-outline-variant($color-6, $color-text);
+}
+
+
+.btn-outline-gallery {
+	@include button-outline-variant($color-secondary, $color-text-contrast);
+}
+
+
+
+@each $color in ('info', 'success', 'warning', 'danger') {
+	.btn-outline-#{$color} {
+		@include button-outline-variant(map_get($theme-colors, $color), $color-text-contrast);
+	}
+}

@@ -1,0 +1,35 @@
+/*
+ |--------------------------------------------------------------------------
+ | Common stylesheet.
+ |--------------------------------------------------------------------------
+*/
+
+main,
+section {
+	padding-top: 30px;
+	padding-bottom: 30px;
+	@include media-breakpoint-up(md) {
+		padding-top: 60px;
+		padding-bottom: 60px;
+	};
+}
+
+mark {
+	color: $secondary;
+	background-color: transparent;
+	display: inline;
+	padding: 0;
+}
+
+.navbar-spacer {
+	height: $navbar-height-mobile;
+	@include media-breakpoint-up($navbar-trigger) {
+		height: $navbar-height;
+	};
+}
+
+
+.box-shadow{
+	border-radius: .25rem!important;
+	box-shadow: 0 10px 15px -3px rgba(0,0,0,.1),0 4px 6px -2px rgba(0,0,0,.05)!important;
+}

@@ -1,0 +1,103 @@
+@mixin animate($speed: 0.35) {
+	transition: all #{$speed}s ease-in-out;
+}
+
+@mixin shadow($height: 1) {
+	box-shadow:
+	0 #{$height}px #{$height*2}px rgba(black, 0.1+0.2/$height),
+	0 0 #{$height}px rgba(black, 0.1/$height);
+}
+
+@mixin button-variant($background, $border, $text, $hover-background: mix($text, $background, $button-hover-mix), $hover-border: mix($text, $border, $button-hover-mix), $hover-text: $text, $active-background: mix($text, $background, $button-active-mix), $active-border: mix($text, $border, $button-active-mix), $active-text: $text) {
+	color: $text;
+	@include gradient-bg($background);
+	border-color: $border;
+	@include box-shadow($btn-box-shadow);
+
+	@include hover {
+		color: $hover-text;
+		@include gradient-bg($hover-background);
+		border-color: $hover-border;
+	}
+
+	&:focus,
+	&.focus {
+		// Avoid using mixin so we can pass custom focus shadow properly
+		@if $enable-shadows {
+			box-shadow: $btn-box-shadow, 0 0 0 $btn-focus-width rgba(mix(color-yiq($background), $border, 15%), .5);
+		} @else {
+			box-shadow: 0 0 0 $btn-focus-width rgba(mix(color-yiq($background), $border, 15%), .5);
+		}
+	}
+
+	// Disabled comes first so active can properly restyle
+	&.disabled,
+	&:disabled {
+		color: $text;
+		background-color: $background;
+		border-color: $border;
+		// Remove CSS gradients if they're enabled
+		@if $enable-gradients {
+			background-image: none;
+		}
+	}
+
+	&:not(:disabled):not(.disabled):active,
+	&:not(:disabled):not(.disabled).active,
+	.show > &.dropdown-toggle {
+		color: $active-text;
+		background-color: $active-background;
+		@if $enable-gradients {
+			background-image: none; // Remove the gradient for the pressed/active state
+		}
+		border-color: $active-border;
+
+		&:focus {
+			// Avoid using mixin so we can pass custom focus shadow properly
+			@if $enable-shadows and $btn-active-box-shadow != none {
+				box-shadow: $btn-active-box-shadow, 0 0 0 $btn-focus-width rgba(mix(color-yiq($background), $border, 15%), .5);
+			} @else {
+				box-shadow: 0 0 0 $btn-focus-width rgba(mix(color-yiq($background), $border, 15%), .5);
+			}
+		}
+	}
+}
+
+@mixin button-outline-variant($color, $text, $hover-color: $color, $hover-text: $text, $active-color:  mix($text, $color, $button-active-mix), $active-text: $text) {
+	color: $color;
+	background-color: transparent;
+	border-color: $color;
+
+	@include hover {
+		color: $hover-text;
+		background-color: $hover-color;
+		border-color: $color;
+	}
+
+	&:focus,
+	&.focus {
+		box-shadow: 0 0 0 $btn-focus-width rgba($color, .5);
+	}
+
+	&.disabled,
+	&:disabled {
+		color: $color;
+		background-color: transparent;
+	}
+
+	&:not(:disabled):not(.disabled):active,
+	&:not(:disabled):not(.disabled).active {
+		color: $active-text;
+		background-color: $active-color;
+		border-color: $color;
+
+		&:focus {
+			// Avoid using mixin so we can pass custom focus shadow properly
+			@if $enable-shadows and $btn-active-box-shadow != none {
+				box-shadow: $btn-active-box-shadow, 0 0 0 $btn-focus-width rgba($color, .5);
+			} @else {
+				box-shadow: 0 0 0 $btn-focus-width rgba($color, .5);
+			}
+		}
+	}
+}

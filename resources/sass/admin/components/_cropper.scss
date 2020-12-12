@@ -1,0 +1,35 @@
+.cropper-toolbar {
+	margin: 0.5em 0;
+	display: none;
+
+	&.visible {
+		display: flex;
+	}
+
+	button {
+		flex: 1;
+
+		> i {
+			margin-right: 0.5em;
+		}
+
+		+ button {
+			margin-left: 5px;
+		}
+	}
+}
+
+.cropper-wrapper {
+	max-height: 60vh;
+
+	.cropper-container {
+		width: 100%;
+	}
+}
+
+.cropper-preview {
+	background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQAQMAAAAlPW0iAAAAA3NCSVQICAjb4U/gAAAABlBMVEXMzMz////TjRV2AAAACXBIWXMAAArrAAAK6wGCiw1aAAAAHHRFWHRTb2Z0d2FyZQBBZG9iZSBGaXJld29ya3MgQ1M26LyyjAAAABFJREFUCJlj+M/AgBVhF/0PAH6/D/HkDxOGAAAAAElFTkSuQmCC');
+	border: 1px solid $color-text;
+	display: block;
+	margin: 0 auto;
+}

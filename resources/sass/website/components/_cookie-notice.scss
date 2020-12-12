@@ -1,0 +1,42 @@
+.cookie-notice {
+    display: none;
+    background-color: #e0e0e0;
+    color: $secondary;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 1rem 1.5em;
+    z-index: 1000;
+    font-size: 14px;
+
+    &-wrapper {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    &-message {
+        width: 100%;
+
+        @include media-breakpoint-up(md) {
+            width: calc(100% - 315px);
+        }
+    }
+
+    &-action {
+        width: 100%;
+
+        > a {
+            width: 100%;
+			display: block;
+			margin-top: 1em;
+        }
+
+        @include media-breakpoint-up(md) {
+            margin-left: 15px;
+            width: 300px;
+            justify-content: space-around;
+        }
+    }
+}

@@ -1,0 +1,30 @@
+
+  .accordion {
+    text-align: left;
+
+    @include media-breakpoint-up(md) {
+      margin-bottom: 3.5rem;
+    }
+    &-item{
+      border-bottom:3px solid $color-accent;
+      padding:1rem 0rem;
+      cursor: pointer;
+      cursor: hand;
+      &-title{
+        padding:0 !important;
+        margin:0 !important;
+        color:$color-accent;
+        &.collapsed{
+          color:$color-primary;
+        }
+      }
+      &-description{
+        padding:0px;
+        font-size:1rem;
+        text-align:justify;
+        p{margin:0}
+      }
+    }
+  }
+
+

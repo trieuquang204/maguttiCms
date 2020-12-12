@@ -1,0 +1,176 @@
+// Colors.
+$primary: $color-primary;
+$secondary: $color-secondary;
+
+// Body.
+$body-bg: $color-background;
+$body-color: $color-text;
+
+// Components
+//
+// Define common padding and border radius sizes and more.
+
+$grid-gutter-width: $grid-space;
+
+$border-radius-lg: 0;
+$border-radius-sm: 0;
+
+// Links
+$link-color: inherit;
+$link-decoration: none;
+$link-hover-color: inherit;
+$link-hover-decoration: none;
+
+// Typography
+$font-family-base: $font-family-text;
+// stylelint-enable value-keyword-case
+
+$font-size-base: 1rem; // Assumes the browser default, typically `16px`
+$font-size-sm: $font-size-base * 0.9;
+$font-size-lg: $font-size-base * 0.95;
+
+$line-height-base: 1.4;
+
+$h1-font-size: $font-size-base * 2.5 !default;
+$h2-font-size: $font-size-base * 2 !default;
+$h3-font-size: $font-size-base * 1.6 !default;
+$h4-font-size: $font-size-base * 1.3 !default;
+$h5-font-size: $font-size-base * 1.1 !default;
+$h6-font-size: $font-size-base !default;
+
+$headings-font-family: $font-family-title;
+$headings-font-weight: 700;
+$headings-color: $color-accent;
+
+$hr-border-color: $border-color;
+$hr-border-width: $border-width;
+
+// Theme colors.
+$theme-colors: (
+        'accent': $color-accent,
+        'color-4': $color-4,
+        'color-5': $color-5,
+        'color-6': $color-6,
+);
+
+$spacer: 2rem !default;
+
+// Buttons + Forms
+
+$input-btn-padding-y: 0.75rem !default;
+$input-btn-padding-x: 1rem !default;
+$input-btn-font-family: null !default;
+
+$input-btn-focus-width: 0;
+
+$input-btn-padding-y-sm: 0.5rem !default;
+$input-btn-padding-x-sm: 0.5rem !default;
+
+$input-btn-padding-y-lg: 0.5rem !default;
+$input-btn-padding-x-lg: 0.5rem !default;
+
+// Buttons
+
+$btn-padding-y: 2rem !default;
+$btn-padding-x: 2rem !default;
+
+$btn-border-width: 3px;
+
+$btn-font-weight: 400;
+$btn-box-shadow: none;
+$btn-active-box-shadow: none;
+
+$btn-block-spacing-y: 0.5rem;
+
+// Allows for customizing button radius independently from global border radius
+$btn-border-radius: 5px;
+$btn-border-radius-lg: $border-radius-lg;
+$btn-border-radius-sm: $border-radius-sm;
+
+// Forms
+
+$label-margin-bottom: 0.5em;
+
+$input-bg: $form-control-background;
+$input-disabled-bg: mix(black, $form-control-background, 20%);
+
+$input-color: $body-color;
+$input-border-color: $form-control-border-color;
+$input-box-shadow: none;
+
+$input-border-radius: $border-radius !default;
+$input-border-radius-lg: $border-radius-lg !default;
+$input-border-radius-sm: $border-radius-sm !default;
+
+$input-focus-bg: $input-bg;
+$input-focus-border-color: $form-control-border-color-focus;
+
+$input-placeholder-color: $form-control-placeholder-color;
+
+// $input-height-border:                   $input-border-width * 2 !default;
+
+$form-text-margin-top: 0;
+
+$form-group-margin-bottom: $grid-gutter-width;
+
+// $form-check-input-gutter:               1.25rem !default;
+// $form-check-input-margin-y:             .3rem !default;
+// $form-check-input-margin-x:             .25rem !default;
+//
+// $form-check-inline-margin-x:            .75rem !default;
+// $form-check-inline-input-margin-x:      .3125rem !default;
+//
+// $form-grid-gutter-width:                10px !default;
+// $form-group-margin-bottom:              1rem !default;
+
+// Pagination
+
+$pagination-padding-y: 0.5rem !default;
+$pagination-padding-x: 0.75rem !default;
+$pagination-padding-y-sm: 0.25rem !default;
+$pagination-padding-x-sm: 0.5rem !default;
+$pagination-padding-y-lg: 0.75rem !default;
+$pagination-padding-x-lg: 1.5rem !default;
+$pagination-line-height: 1.25 !default;
+
+$pagination-border-width: $border-width !default;
+$pagination-border-color: $border-color !default;
+
+$pagination-hover-color: white !default;
+$pagination-hover-bg: $color-4 !default;
+$pagination-hover-border-color: $color-4 !default;
+
+$pagination-disabled-color: $color-4 !default;
+$pagination-disabled-bg: $color-background !default;
+$pagination-disabled-border-color: $border-color !default;
+
+$grid-breakpoints: (
+        xs: 0,
+        sm: 576px,
+        md: 768px,
+        lg: 992px,
+        xl: 1200px,
+        xxl: 1400px
+);
+
+
+$container-max-widths: (
+        sm: 540px,
+        md: 720px,
+        lg: 960px,
+        xl: 1140px,
+        xxl: 1360px
+);
+
+
+$spacers: (
+        25: ($spacer * 1.25),
+        6: ($spacer * 3.5),
+        7: ($spacer * 4),
+        8: ($spacer * 4.5),
+        10: ($spacer * 5),
+        15: ($spacer * 7.5),
+        20: ($spacer * 10),
+)
+
+

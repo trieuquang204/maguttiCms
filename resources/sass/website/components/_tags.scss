@@ -1,0 +1,13 @@
+.tags {
+    &-item{
+
+    }
+    &-badge{
+        padding:0.5rem .75rem;
+        color: white;
+        border-radius: 10rem;
+        &:hover{
+            color:white;
+        }
+    }
+}

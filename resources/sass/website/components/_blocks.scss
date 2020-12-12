@@ -1,0 +1,88 @@
+
+.blocks {
+  &-item {
+    margin-bottom: 2.5rem;
+    &:last-child {
+      margin-bottom: 0rem;
+    }
+    p {
+      margin: 0;
+      text-align: justify
+    }
+    @include media-breakpoint-down('md') {
+      margin-bottom: 1rem;
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-row: 1fr;
+      grid-template-areas: "content" "image";
+      grid-column-gap: 30px;
+      grid-row-gap: 1rem;
+    }
+     &:hover {
+      img {
+        aopacity: 0.6
+      }
+      .btn-outline-color-4 {
+        color: #EC6A5A;
+        background-color: white;
+        border-color: #EC6A5A;
+      }
+
+    }
+  }
+
+  &-content, {
+    grid-area: content;
+  }
+
+
+  &-image {
+    text-align: justify;
+    grid-area: image;
+  }
+
+  &-title, &-subtitle {
+    margin-bottom: 1rem;
+    @include media-breakpoint-up('md') {
+      margin-bottom: 1.2rem;
+    }
+    padding: 0px
+  }
+
+  &-title {
+    font-weight: bold;
+    color: $primary;
+  }
+
+  img {
+    @include animate(2);
+    @include media-breakpoint-down('lg') {
+      width: 100%;
+    }
+  }
+
+  &-image-container {
+    position: relative;
+    display: inline-block;
+
+  }
+
+  &-image-overlay {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    border: 0px solid red;
+    height: 100%;
+    width: 100%;
+    background-image: url('/website/images/over_coral.png');
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    @include animate(1.5);
+  }
+}
+
+
+
+
+

@@ -1,0 +1,11 @@
+$this->fieldspec['##field##'] = [
+            'type'        => 'media',
+            'required'    => 0,
+            'hidden'      => 0,
+            'label'       => trans('admin.label.##field##'),
+            'lang'        => 0,
+            'mediaType'   => 'Doc',
+            'display'     => 1,
+			'uploadifive' => 1,
+			//'accept'	  => '.pdf'
+        ];

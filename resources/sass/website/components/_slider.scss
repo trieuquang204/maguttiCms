@@ -1,0 +1,29 @@
+.slider {
+    position: relative;
+
+    &-text {
+        margin-top: 1rem;
+        text-align: center;
+
+        @include media-breakpoint-up(md) {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            right: 0;
+            transform: translate(0, -50%);
+            margin-top: 0;
+            text-align: left;
+        }
+    }
+
+    .owl-dots {
+
+        @include media-breakpoint-up(md) {
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            text-align: center;
+        }
+    }
+}

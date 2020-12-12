@@ -1,0 +1,17 @@
+html {
+    font-size: 13px;
+
+    @include media-breakpoint-up(md) {
+        font-size: 14px;   
+    }
+}
+
+body {
+	overflow-x: hidden;
+	margin-top: $header-height-mobile;
+    font-weight: 300;
+
+	@include media-breakpoint-up($header-trigger) {
+		margin-top: $header-height;
+	}
+}

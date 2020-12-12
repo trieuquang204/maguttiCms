@@ -1,0 +1,47 @@
+/*
+ |--------------------------------------------------------------------------
+ | Bootstrap 4.3.1.
+ |--------------------------------------------------------------------------
+*/
+@import "vendor/bootstrap/variables";
+@import "~bootstrap/scss/bootstrap";
+
+/*
+ |--------------------------------------------------------------------------
+ | Admin
+ |--------------------------------------------------------------------------
+*/
+
+// Helpers
+@import "helper/config";
+@import "helper/mixin";
+
+// Vendor override
+@import "vendor/bootstrap/reboot";
+@import "vendor/bootstrap/buttons";
+@import "vendor/bootstrap/card";
+@import "vendor/bootstrap/type";
+@import "vendor/bootstrap/modal";
+@import "vendor/bootstrap/form";
+@import "vendor/jquery-ui/jquery-ui";
+
+// Components
+@import "components/common";
+@import "components/login";
+@import "components/navbar";
+@import "components/header";
+@import "components/admin-table";
+@import "components/action-bar";
+@import "components/search-bar";
+@import "components/home-buttons";
+@import "components/list";
+@import "components/edit";
+@import "components/cropper";
+@import "components/simplegallery";
+@import "components/sortable";
+@import "components/tabs";
+@import "components/datetimepicker";
+@import "components/file-manager";
+@import "components/sidebar";
+@import "components/right-sidebar";
+@import "components/footer";

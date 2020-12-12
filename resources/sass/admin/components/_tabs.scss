@@ -1,0 +1,53 @@
+.nav-tabs {
+	border: 0;
+	display: flex;
+	margin-bottom: 2em;
+	list-style: none;
+	padding: 0;
+
+	.nav-item {
+		float: none;
+		margin-right: 0.2em;
+		flex-grow: 1;
+		@include media-breakpoint-up(sm) {
+			flex-grow: 0;
+		}
+
+		.nav-link {
+			display: block;
+			border-width: $button-border-width;
+			border-style: solid;
+			text-transform: uppercase;
+			letter-spacing: 0.1em;
+			font-size: 1em;
+			height: 3em;
+			padding: 0.5em 2em;
+			line-height: 2em;
+			min-width: 3em;
+			border-radius: $button-border-radius;
+			margin: 0;
+			@include shadow(3);
+			color: $color-1;
+			border-color: $color-3;
+			background-color: $color-3;
+
+			&:visited {color: $color-text;}
+
+			&:hover,
+			&:focus,
+			&:active,
+			&:active:focus {
+				color: $color-1;
+				border-color: $color-3;
+				background: darken($color-3, 10);
+			}
+
+			&.active {
+				color: $color-1;
+				border-color: $color-2;
+				background-color: $color-2;
+				font-weight: 400;
+			}
+		}
+	}
+}

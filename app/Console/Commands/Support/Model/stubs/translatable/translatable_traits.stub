@@ -1,0 +1,2 @@
+use GFTranslatableHelperTrait;
+    use Translatable;

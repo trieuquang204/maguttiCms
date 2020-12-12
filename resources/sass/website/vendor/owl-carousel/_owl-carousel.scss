@@ -1,0 +1,101 @@
+.owl-carousel {
+    .owl-dots {
+        margin: 15px 0;
+        text-align: center;
+        .owl-dot {
+            background-color: rgba($secondary, 0.25);
+            border-radius: 50%;
+            width: 12px;
+            height: 12px;
+            margin: 0 3px;
+            &.active {
+                background-color: $color-accent;
+            }
+        }
+    }
+}
+
+
+.owl-theme .owl-nav {
+    margin-top: 0px;
+    text-align: center;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.owl-theme .owl-nav [class*='owl-'] {
+    color: #FFF;
+    font-size: 20px !important;
+    margin: 0px;
+    background: transparent;
+    display: inline-block;
+    cursor: pointer;
+    border-radius: 0px;
+    position:absolute;
+    outline: none;
+    top: 40%;
+    border: 0px solid #000;
+    border-radius: 0%;
+    &.owl-prev{
+        background-color: transparent;
+        left:2rem;
+        color: white;
+        display:none;
+        opacity:1
+    }
+    &.owl-next{
+        background-color: transparent;
+        right:2rem;
+        color: white ;
+        display:none;
+        opacity:1
+    }
+
+    @include media-breakpoint-up($navbar-trigger) {
+        top: 48%;
+        border: 0px solid #000;
+        font-size: 25px !important;
+        &.owl-prev,
+        &.owl-next{
+            opacity:1;
+            display:block;
+        }
+    }
+}
+
+.owl-theme .owl-nav [class*='owl-']:hover {
+    background: transparent;
+    color: $color-accent;
+    text-decoration: none;
+    outline: none;
+    border: 0px;
+}
+
+.owl-theme .owl-nav .disabled {
+    opacity: 0.5;
+    cursor: default;
+}
+
+.owl-theme .owl-nav.disabled + .owl-dots {
+    margin-top: 10px;
+}
+
+.owl-theme .owl-dots {
+    text-align: center;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.owl-theme .owl-dots .owl-dot {
+    display: inline-block;
+    zoom: 1;
+    *display: inline;
+}
+
+.owl-theme .owl-dots .owl-dot span {
+
+}
+
+.owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span {
+    background: #4DC7A0;
+}
+
+

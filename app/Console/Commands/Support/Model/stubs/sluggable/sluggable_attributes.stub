@@ -1,0 +1,3 @@
+public $sluggable = [
+        ##sluggable_fields##
+    ];

@@ -1,0 +1,41 @@
+<IfModule mod_rewrite.c>
+    <IfModule mod_negotiation.c>
+        Options -MultiViews
+    </IfModule>
+
+    RewriteEngine On
+
+    # Redirect Trailing Slashes If Not A Folder...
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule ^(.*)/$ /$1 [L,R=301]
+
+    # Handle Front Controller...
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteRule ^ index.php [L]
+
+    # Handle Authorization Header
+    RewriteCond %{HTTP:Authorization} .
+    RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+</IfModule>
+
+<IfModule mod_headers.c>
+
+    Header set Content-Security-Policy: "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' *.google.com *.googleapis.com *.googletagmanager.com *.gstatic.com *.iubenda.com *.fontawesome.com *.google-analytics.com *.jquery.com *.bootstrapcdn.com cdnjs.cloudflare.com; object-src 'self'; style-src 'self' 'unsafe-inline' *.googleapis.com *.jquery.com *.fontawesome.com *.bootstrapcdn.com cdnjs.cloudflare.com; img-src 'self' data: *.gstatic.com *.google-analytics.com *.googletagmanager.com *.googleapis.com *.jquery.com *.iubenda.com; frame-src 'self' *.google.com *.iubenda.com *.youtube-nocookie.com; font-src 'self' *.gstatic.com *.fontawesome.com *.bootstrapcdn.com; connect-src 'self' *.google-analytics.com"
+
+    Header set X-Content-Security-Policy: "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' *.google.com *.googleapis.com *.googletagmanager.com *.gstatic.com *.iubenda.com *.fontawesome.com *.google-analytics.com *.jquery.com *.bootstrapcdn.com cdnjs.cloudflare.com; object-src 'self'; style-src 'self' 'unsafe-inline' *.googleapis.com *.jquery.com *.fontawesome.com *.bootstrapcdn.com cdnjs.cloudflare.com; img-src 'self' data: *.gstatic.com *.google-analytics.com *.googletagmanager.com *.googleapis.com *.jquery.com *.iubenda.com; frame-src 'self' *.google.com *.iubenda.com *.youtube-nocookie.com; font-src 'self' *.gstatic.com *.fontawesome.com *.bootstrapcdn.com; connect-src 'self' *.google-analytics.com"
+
+    Header set X-WebKit-CSP: "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' *.google.com *.googleapis.com *.googletagmanager.com *.gstatic.com *.iubenda.com *.fontawesome.com *.google-analytics.com *.jquery.com *.bootstrapcdn.com cdnjs.cloudflare.com; object-src 'self'; style-src 'self' 'unsafe-inline' *.googleapis.com *.jquery.com *.fontawesome.com *.bootstrapcdn.com cdnjs.cloudflare.com; img-src 'self' data: *.gstatic.com *.google-analytics.com *.googletagmanager.com *.googleapis.com *.jquery.com *.iubenda.com; frame-src 'self' *.google.com *.iubenda.com *.youtube-nocookie.com; font-src 'self' *.gstatic.com *.fontawesome.com *.bootstrapcdn.com; connect-src 'self' *.google-analytics.com"
+
+    Header set X-Frame-Options "sameorigin"
+    Header set X-Content-Type-Options "nosniff"
+
+    # `mod_headers` cannot match based on the content-type, however,
+    # the `Content-Security-Policy` response header should be sent
+    # only for HTML documents and not for the other resources.
+
+    <FilesMatch "\.(%FilesMatchPattern%)$">
+        Header unset Content-Security-Policy
+    </FilesMatch>
+
+</IfModule>

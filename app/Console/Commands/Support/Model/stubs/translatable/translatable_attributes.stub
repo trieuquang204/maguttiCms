@@ -1,0 +1,3 @@
+public $translatedAttributes = [
+        ##translatable_fields##
+    ];

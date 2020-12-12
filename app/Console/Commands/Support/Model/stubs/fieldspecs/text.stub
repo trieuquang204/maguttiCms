@@ -1,0 +1,10 @@
+$this->fieldspec['##field##'] = [
+            'type'     => 'text',
+            'required' => 1,
+            'hidden'   => 0,
+            'size'     => 600,
+            'h'        => 300,
+            'label'    => trans('admin.label.##field##'),
+            'display'  => 1,
+            'cssClass' => 'wyswyg',
+        ];

@@ -1,0 +1,22 @@
+
+.page-share {
+  margin-top: 1.2rem;
+  padding-top: 1.2rem;
+  border-top: 1px solid $color-4;
+
+  > a {
+    margin: 0rem 0.25rem;
+    &:hover {
+      color: $color-accent;
+    }
+  }
+   &__label{
+
+   }
+  .fa-stack .fa-inverse {
+    color: white;
+
+  }
+}
+
+
